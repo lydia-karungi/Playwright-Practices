@@ -1,0 +1,21 @@
+{
+  "name": "playwrightautomation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "Regression": "npx playwright test",
+    "smokeTests": "npx playwright test --grep 'smoke'",
+    "safariConfig": "npx playwright test --config playwright.config1.js --project=Mobile-Safari"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.7.7"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  }
+}
