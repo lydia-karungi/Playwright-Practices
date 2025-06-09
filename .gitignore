@@ -33,4 +33,4 @@ traces/
 
 # Logs
 *.log
-logs/
+logs/state.json
