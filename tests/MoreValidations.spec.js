@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test')
 
-test.describe.configure({mode: 'serial'}); //serial helps in a case where i want if one test fails in a suite, 
+//test.describe.configure({mode: 'serial'}); //serial helps in a case where i want if one test fails in a suite, 
 // then their is no nee to continue running the rest, just skip them
 test.describe("validation tests", { tag: '@smoke' }, () => {
     test("Popup validations", async ({ page }) => {
