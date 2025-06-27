@@ -18,7 +18,7 @@ jobs:
           PLAYWRIGHT_SERVICE_RUN_ID: $(Build.DefinitionName) - $(Build.BuildNumber) - $(System.JobAttempt)
         inputs:
           azureSubscription: 'lydiakarungi'
-          scriptType: 'pscore'
+          scriptType: 'bash'
           scriptLocation: 'inlineScript'
           inlineScript: |
             npx playwright test ClientApp.spec.js --config=playwright.service.config.js
