@@ -21,7 +21,7 @@ jobs:
           scriptType: 'bash'
           scriptLocation: 'inlineScript'
           inlineScript: |
-            npx playwright test ClientApp.spec.js --config=playwright.service.config.js
+            npx playwright test --config=playwright.service.config.js
           addSpnToEnvironment: true
 
       - task: PublishPipelineArtifact@1
