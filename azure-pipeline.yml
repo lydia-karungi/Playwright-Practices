@@ -1,3 +1,6 @@
+pool:
+  name: Default
+
 jobs:
   - job: Build
     steps:
@@ -7,26 +10,24 @@ jobs:
         inputs:
           targetType: 'inline'
           script: 'npm ci'
-          workingDirectory: tests/ # update accordingly
- 
+          workingDirectory: tests/
+
       - task: AzureCLI@2
         displayName: Run Playwright Test
         env:
           PLAYWRIGHT_SERVICE_URL: $(PLAYWRIGHT_SERVICE_URL)
           PLAYWRIGHT_SERVICE_RUN_ID: $(Build.DefinitionName) - $(Build.BuildNumber) - $(System.JobAttempt)
         inputs:
-          azureSubscription: 'lydiakarungi' # Service connection used to authenticate this pipeline with Azure to use the service
+          azureSubscription: 'lydiakarungi'
           scriptType: 'pscore'
           scriptLocation: 'inlineScript'
           inlineScript: |
-            npx playwright test ClientApp.spec.js  --config=playwright.service.config.js           
+            npx playwright test ClientApp.spec.js --config=playwright.service.config.js
           addSpnToEnvironment: true
-          
- 
+
       - task: PublishPipelineArtifact@1
         displayName: Upload Playwright report
         inputs:
-          targetPath: tests/playwright-report/ # update accordingly
+          targetPath: tests/playwright-report/
           artifact: 'Playwright tests'
           publishLocation: 'pipeline'
- 
