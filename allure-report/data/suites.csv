@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","16451","Popup validations","safari","Mon Jun 09 16:14:37 AEST 2025","passed","Mon Jun 09 16:14:53 AEST 2025","validation tests","MoreValidations.spec.js","",""
+"","2445","visual","safari","Mon Jun 09 16:14:52 AEST 2025","failed","Mon Jun 09 16:14:54 AEST 2025","validation tests","MoreValidations.spec.js","",""
+"","14514","Screenshot & Visual comparision","safari","Mon Jun 09 16:14:37 AEST 2025","passed","Mon Jun 09 16:14:51 AEST 2025","validation tests","MoreValidations.spec.js","",""
+"","30210","Client App login for Zara Coat 4","safari","Mon Jun 09 16:15:08 AEST 2025","broken","Mon Jun 09 16:15:38 AEST 2025","Login","ClientAppPO.spec.js","",""
+"","30211","Client App login for Adidas Originals","safari","Mon Jun 09 16:15:08 AEST 2025","broken","Mon Jun 09 16:15:38 AEST 2025","Login","ClientAppPO.spec.js","",""

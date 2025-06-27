@@ -12,8 +12,10 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@azure/microsoft-playwright-testing": "^1.0.0-beta.7",
     "@playwright/test": "^1.52.0",
-    "@types/node": "^22.7.7"
+    "@types/node": "^22.7.7",
+    "allure-playwright": "^3.2.2"
   },
   "dependencies": {
     "exceljs": "^4.4.0"
