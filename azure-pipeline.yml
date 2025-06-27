@@ -15,13 +15,14 @@ jobs:
         displayName: Run Playwright Test
         env:
           PLAYWRIGHT_SERVICE_URL: $(PLAYWRIGHT_SERVICE_URL)
-          PLAYWRIGHT_SERVICE_RUN_ID: $(Build.DefinitionName) - $(Build.BuildNumber) - $(System.JobAttempt)
         inputs:
           azureSubscription: 'lydiakarungi'
           scriptType: 'bash'
           scriptLocation: 'inlineScript'
           inlineScript: |
-            npx playwright test --config=playwright.service.config.js
+            export PLAYWRIGHT_SERVICE_RUN_ID="run-$(date +%s)"
+            echo "Using Run ID: $PLAYWRIGHT_SERVICE_RUN_ID"
+            PLAYWRIGHT_SERVICE_RUN_ID=$PLAYWRIGHT_SERVICE_RUN_ID npx playwright test --config=playwright.service.config.js
           addSpnToEnvironment: true
 
       - task: PublishPipelineArtifact@1
