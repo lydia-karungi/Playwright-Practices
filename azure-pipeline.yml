@@ -4,8 +4,7 @@ pool:
 jobs:
   - job: Build
     steps:
-      - task: PowerShell@2
-        enabled: true
+      - task: Bash@3
         displayName: "Install dependencies"
         inputs:
           targetType: 'inline'
