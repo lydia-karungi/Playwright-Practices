@@ -4,6 +4,6 @@ exports.customtest = base.test.extend({
     testDataForOrder: {
         username: "anshika@gmail.com",
         password: "Iamking@000",
-        productName: "ZARA COAT 5"
+        productName: "IPHONE 13 PRO"
     }
 })
